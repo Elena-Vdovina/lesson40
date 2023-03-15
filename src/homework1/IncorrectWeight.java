@@ -7,4 +7,8 @@ package homework1;
 // вида "Вес не может быть отрицательным: [некорректный вес]"
 public class IncorrectWeight extends IllegalArgumentException {
 
+  public IncorrectWeight(int weight) {
+    super("Вес не может быть отрицательным: " + weight);
+  }
+
 }
