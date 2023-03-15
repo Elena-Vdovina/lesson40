@@ -7,8 +7,11 @@ public class Pizza {
   private String title;
   private int weight;
 
-  public Pizza(String title, int weight) {
+  public Pizza(String title, int weight) throws IncorrectWeight {
     this.title = title;
+    if (weight<0){
+      throw new IncorrectWeight(weight);
+    }
     this.weight = weight;
   }
 
